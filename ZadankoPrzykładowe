@@ -24,7 +24,15 @@
             //odolujemy sie do pola w form i pobieramy jego wartosc .value 
             const wartoscform = document.querySelector('input[name="pole"]').value
             //wartosc pola form wyrzucamy do diva
-            w.textContent = wartoscform;
+            //w.textContent = wartoscform;
+            if(wartoscform % 2 == 0)
+            {
+                w.textContent = 'liczba jest parzysta';
+            }
+            else
+            {
+                w.textContent = 'liczba jest nieparzysta';
+            }
         })
     </script>
 </body>
