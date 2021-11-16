@@ -13,6 +13,12 @@
             font-weight: bold;
             padding: 30px;
         }
+        .inv
+        {
+            height: 0px;
+            border: 0px;
+            box-shadow: white;
+        }
 
     </style>
 </head>
@@ -48,10 +54,46 @@
         <li>skorowidz</li>
     </ol>
     <div>Tabela 1</div>
-
+        <table border=2 width=150px height=150px>
+            <tr><td colspan="6"></td></tr>
+            <tr><td colspan="3"></td><td colspan="3"></td></tr>
+            <tr><td colspan="2"></td><td colspan="2"></td><td colspan="2"></td></tr>
+            <tr class="inv" ><td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td></tr>
+        </table>
     <div>Tabela 2</div>
-
+        <table border=2 width=150px height=150x>
+            <tr><td rowspan="3"></td><td rowspan="2"></td><td rowspan="1"></td></tr>
+            <tr> <td rowspan="1"></td></tr>
+            <tr><td rowspan="1"></td><td rowspan="1"></td></tr>
+        </table>
     <div>Tabela 3</div>
-    
+    <table border=2 width=150px height=150x>
+    <tr>
+        <td colspan="2" rowspan="3"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td rowspan="2"></td>
+    </tr>
+    <tr>
+        <td colspan="2"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td colspan="3" rowspan="2"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <td colspan="6"></td>
+    </table>
 </body>
 </html>
