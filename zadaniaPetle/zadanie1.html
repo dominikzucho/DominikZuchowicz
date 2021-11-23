@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .show{
+            width: 250px;
+            height: 250px;
+            background-color: rgba(128, 193, 236, 0.774);
+            margin-top: 25px;
+            margin-left: calc(50% - 0.5*(250px));
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="GET">
+        <input type="number" name="podstawa">
+        <input type="number" name="wysokosc">
+        <input type="submit" value="Wynik">
+    </form>
+    <div class="show"></div>
+
+
+
+    <script>
+        const form = document.querySelector('form');
+        const div = document.querySelector('div');
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            div.textContent = "";
+            let podstawa = parseInt(document.querySelector('input[name="podstawa"]').value);
+            let wysokosc = parseInt(document.querySelector('input[name="wysokosc"]').value)
+            for(let i = 0; i < wysokosc; i++)
+            {
+                div.setAttribute('style', 'white-space: pre;');
+                div.textContent += "\r\n"; 
+                for(let j = 0; j < podstawa ; j++)
+                {
+                    if(j==0||j==podstawa-1||i==0|i==wysokosc-1) div.textContent += " * ";
+                    else div.textContent += "    ";
+                    
+                }
+            }
+        });
+    </script>
+</body>
+</html>
