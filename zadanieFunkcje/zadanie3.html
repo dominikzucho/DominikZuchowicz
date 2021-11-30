@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <input type="number" name="l1" id="">
+        <input type="number" name="l2" id="">
+        <input type="submit" value="">
+    </form>
+    <div></div>
+    <script>
+        function potega(liczba)
+        {
+            let potega = liczba*liczba*liczba;
+            return potega;
+        }
+
+        const form = document.querySelector('form');
+        const div = document.querySelector('div');
+        form.addEventListener('submit', (e) =>{
+            e.preventDefault();
+            l1 = parseInt(document.querySelector('input[name="l1"]').value);
+            l2 = parseInt(document.querySelector('input[name="l2"]').value);
+            div.textContent = `wynik to ${potega(l1) + potega(l2)}`;
+        });
+    </script>
+</body>
+</html>
