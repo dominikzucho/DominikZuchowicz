@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .f div{
+            display: flex;
+            justify-content: space-between;
+            width: 450px;
+            padding-top: 5px;
+        }
+        span{
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form action="" class="f">
+        <div><label for="red">wpisz wartosc koloru czerwonego:</label>
+            <input type="number" name="red"></div>
+            <span class="error"></span>
+        <div><label for="green">wpisz wartosc koloru zielonego:</label>
+            <input type="number" name="green"></div>
+            <span class="error"></span>
+        <div><label for="blue">wpisz wartosc koloru niebieskiego:</label>
+            <input type="number" name="blue"></div>
+            <span class="error"></span>
+        
+        <div class="button">
+            <input type="submit" value="zmien kolor tla">
+        </div>
+    </form>
+<script>
+    const form = document.querySelector('form');
+    const inputred = document.querySelector('input[name="red"]');
+    const inputgreen = document.querySelector('input[name="green"]');
+    const inputblue = document.querySelector('input[name="blue"]');
+    const errors = document.querySelectorAll('span.error')
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let bla=0;
+        let red = inputred.value;
+        let green = inputgreen.value;
+        let blue = inputblue.value;
+        if(red<0||red>255) {errors[0].textContent = 'wartość musi zawierać się w przedziale 0-255';bla++} else errors[0].textContent = '';
+        if(green<0||green>255){ errors[1].textContent = 'wartość musi zawierać się w przedziale 0-255';bla++} else errors[1].textContent = '';
+        if(blue<0||blue>255){ errors[2].textContent = 'wartość musi zawierać się w przedziale 0-255';bla++} else errors[2].textContent = '';
+        if(bla>0) return false;
+        document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+
+        // errors.forEach(i=>{
+        //     i.textContent='';
+        // })
+    });
+</script>
+</body>
+</html>
