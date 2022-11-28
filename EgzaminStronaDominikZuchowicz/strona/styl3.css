@@ -1,0 +1,34 @@
+*{
+    font-family: Verdana, sans-serif;
+}
+.banner-left{
+    background-color: #29434E;
+    color: rgb(255, 255, 255);
+    width: 30%;
+    height: 70px;
+}
+.lista{
+    background-color: #B0BEC5;
+    height: 320px;
+    overflow: scroll;
+}
+footer{
+    background-color: #29434E;
+    color: #ffffff;
+}
+section{
+    padding: 5px;
+    width: 226px;
+    height: 280px;
+    display: flex;
+    
+}
+h3{
+    background-color: #546E7A;
+    color: #ffffff;
+    padding: 0px;
+}
+h4{
+    text-align: center;
+    margin: 0px;
+}
