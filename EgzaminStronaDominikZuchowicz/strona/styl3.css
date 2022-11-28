@@ -16,12 +16,15 @@ footer{
     background-color: #29434E;
     color: #ffffff;
 }
+section div{
+margin: 30px;
+}
 section{
     padding: 5px;
     width: 226px;
     height: 280px;
     display: flex;
-    
+
 }
 h3{
     background-color: #546E7A;
