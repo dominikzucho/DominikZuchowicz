@@ -1,11 +1,21 @@
 *{
     font-family: Verdana, sans-serif;
 }
+.banner-right{
+    background-color: #29434E;
+    color: white;
+    width: 30%;
+    height: 70px;
+    
+}
 .banner-left{
     background-color: #29434E;
     color: rgb(255, 255, 255);
-    width: 30%;
+    width: 70%;
     height: 70px;
+}
+.banner{
+    display: flex;
 }
 .lista{
     background-color: #B0BEC5;
